@@ -4,7 +4,8 @@ import "./SideBarOption.css";
 function SideBarOption({ title, Icon }) {
   return (
     <div className="sideBarOption">
-      <p>{title}</p>
+      {Icon && <Icon className="sideBarOption__icon" />}
+      {Icon ? <h4>{title}</h4> : <p>{title}</p>}
     </div>
   );
 }
